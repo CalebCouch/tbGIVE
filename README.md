@@ -13,7 +13,7 @@
 | Name | Description | Consensus |
 |------|-------------|-----------|
 | / | Default route is reserved for server messages of no particular format | 1 sat per byte |
-| /HASH | Any 20 character string is reserved as a route that references the data the hash was made from | 1 sat per byte |
+| /HASH | Any 20 character string is reserved as a route that references the data hosted | 1 sat per byte |
 
 ## CLI
 | Name | Arguments | Description |
@@ -25,9 +25,9 @@
 | publish-data | filename, price | Creatse and broadcasts a bitcoin transaction containing the hash of the data found in the given file, Ensuring the price is greater then the number of bytes |
 
 ## Dependencies
-All dependencies are pre packaged in the binaries found in the releases section.
+All dependencies are pre-packaged in the binaries found in the releases section.
 
 | Name | Version | Description |
 |------|---------|-------------|
-| Bitcoin Core | ? | Used to locate or publish dids and data hash's on the Blockchain |
+| Bitcoin Core | ? | Used to locate or publish did-dht-keys and data hash's on the Blockchain |
 | DID-DHT | ? | Used to discover or publish dids on the mainline DHT protocol |
