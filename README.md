@@ -1,6 +1,6 @@
-###TBPUB###
+### TBPUB
 
-##Terms
+## Terms
 | Name | Description |
 |------|-------------|
 | DID | Decentralized-Identity |
@@ -9,13 +9,13 @@
 | COST | The amount of BTC destroyed by sending it to a script starting with OP_RETURN |
 | ROUTE | A string pointing to a set of data in tbpub with attached consensus rules |
 
-##Routes
+## Routes
 | Name | Description | Consensus |
 |------|-------------|-----------|
 | / | Default route is reserved for server messages of no particular format | 1 sat per byte |
 | /HASH | Any 20 character string is reserved as a route that references the data the hash was made from | 1 sat per byte |
 
-##CLI
+## CLI
 | Name | Arguments | Description |
 |------|-----------|-------------|
 | get-dids | None | Returns a Json Array of all discovered DID-DHT keys |
@@ -24,7 +24,7 @@
 | publish-dids | [did-dht-key, price] | Publishes all dids in the given array in a single bitcoin transaction, Price must be at least 1000 sats per did |
 | publish-data | filename, price | Creatse and broadcasts a bitcoin transaction containing the hash of the data found in the given file, Ensuring the price is greater then the number of bytes |
 
-##Dependencies
+## Dependencies
 All dependencies are pre packaged in the binaries found in the releases section.
 
 | Name | Version | Description |
