@@ -1,5 +1,25 @@
 # TBPUB
 
+## Abstract
+
+tbPUB is a peer to peer network whick uses the bitcoin core network for 
+discovery of nodes and to store the hashes of published documents. 
+tbPUB prevents spam by requiring a small amount of BTC to be destroyed 
+before allowing a document to be published.
+
+### Publication
+
+A publication takes a set of data and creates a bitcoin UTXO that 
+contains the HASH of the data. The data is then read and replicated 
+by all other tbPUB nodes in order to ensure its always avalible.
+
+### Hosting
+
+A secondary use of the tbPUB nodes is a hosting of certian types of data
+at certian routes on the node. Spam is prevented by requring a certian 
+amount of BTC to be destroyed to allow your node to be discoverd by the 
+network.
+
 ## Terms
 | Name | Description |
 |------|-------------|
