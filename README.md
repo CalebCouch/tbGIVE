@@ -51,6 +51,6 @@ lightweight option for App Providers to allow their Apps to read published Books
 
 ### Description
 TBBandwidth is a built-in layer two protocol that allows for spamless discovery 
-of DID-DHT keys. Additionally, by attaching a price to DID-DHT keys, other 
-protocols can be built that only allow a certain number of interactions based 
-on the cost of a did.
+and resolution of DID-DHT keys to DID docs. Additionally, by attaching a price 
+to DID-DHT keys, other protocols can be built that only allow a certain number
+of interactions based on the cost of a did.
