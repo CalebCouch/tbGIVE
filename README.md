@@ -1,20 +1,28 @@
 # TBPUB
 
+## Books & Pages
+A TBPUB Documents consists of a single Book of Pages, Where a Book is a Json 
+Array of Pages. Each Page must contain a price field, where the minimum price 
+of a Page is one sat per byte.
+
+## Publishing
+To publish a Book, the hash of the Book is put in a bitcoin transaction that 
+destroys at least as many sats as the sum of all its pages. To limit the number 
+of Blockspace used, only the highest paying Book in a Block is concider valid.
+
 ## TBPUB Root Node
 
 ### Description
+A TBPUB Root Node is a heavy-weight but fully trustless node capable of reading, 
+verifying, and publishing books on the network.
 
-A TBPUB Root Node is a heavy-weight but fully trustless node capable of reading, verifying, 
-and publishing documents on the network.
-
-When starting your node it will crawl through the blockchain, creating a list of all 
-the published documents, and  other Root Nodes on the network. 
-To obtain the published data, you must first be on the network to prevent spam. 
-Getting on the network requires that your Root Node is Discoverable via the Bitcoin blockchain. 
-To allow your Root Node to be discovered, it will create a bitcoin transaction containing a 
-did-dht key pointing to your Root Node. Each Root Node will only allow you to read the 
-published data once. Every Root Node after verifying the documents, will store and allow 
-other Root Nodes to read the data exactly once.
+When starting your Root Node, it will crawl through the blockchain, creating a 
+list of all the published books, and other Root Nodes on the network. To obtain 
+the data contained in the Books, you must be discoverable by the network to 
+prevent spam. To be discoverable by other Root Nodes on the network, your Root 
+Node will create a bitcoin transaction containing a did-dht key pointing to 
+your Root Node. Each Root Node can only be read by another Root node once, 
+Expecting that after obtaining and verifying the data, each will store it locally.
 
 ### Requirements
 1. Bitcoin Core Full Node
@@ -23,14 +31,11 @@ other Root Nodes to read the data exactly once.
 ## TBPUB Node
 
 ### Description
-
-A TBPUB Node is a lightweight version of the Root Node that gets the blockchain from a trusted
-source such as blockstream.info. And obtains the published documents from a non trusted source.
-
-After getting the list of published documents and the blockchain data,
-It will verify that none of the documents have been tampered with.
+A TBPUB Node is a lightweight version of the Root Node that gets the blockchain 
+from a trusted source such as blockstream.info. And obtains the published books 
+from a non trusted source. After getting the list of published books and the 
+blockchain data, It will verify that none of the books have been tampered with.
 
 ### Requirements
 1. URL to a hosted and trusted service such as blockstream.info to get blockchain data
-2. URL to a hosted and nontrusted service that gives the published documents
-
+2. URL to a hosted and nontrusted service that gives the published books
