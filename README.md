@@ -39,3 +39,18 @@ blockchain data, It will verify that none of the books have been tampered with.
 ### Requirements
 1. URL to a hosted and trusted service such as blockstream.info to get blockchain data
 2. URL to a hosted and nontrusted service that gives the published books
+
+## TBPUB Miner
+
+### Description
+A TBPUB Miner is an online service that runs a Root Node. It can allow others 
+to publish data with a simple API and lighting payments. Or it can be a more 
+lightweight option for App Providers to allow their Apps to read published Books.
+
+## TBBandwidth
+
+### Description
+TBandwidth is a built-in layer two protocol that allows for spamless discovery 
+of DID-DHT keys. Additionally, by attaching a price to DID-DHT keys, other 
+protocols can be built that only allow a certain number of interactions based 
+on the cost of a did.
