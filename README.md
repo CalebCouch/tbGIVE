@@ -116,4 +116,4 @@ A TBBandwidth is a type of tbPUB Page that contains a bunch of DIDs and a Price 
 
 ### Uses
 1. Discovery of DIDs
-2. Putting a price on a DID to eliminate spam
+2. Putting a price on a DID
