@@ -40,7 +40,8 @@ A Hash is a 20-character string and is unique for every piece of data. The Hash 
 
 ### Hash Transaction
 A Hash Transaction is a tbPUB Transaction that publishes a Book Hash. 
-##tbPUB Root Node
+
+## tbPUB Root Node
 
 ### Abstract
 tbPUB Root Nodes are how Books get published, read, and verified.
